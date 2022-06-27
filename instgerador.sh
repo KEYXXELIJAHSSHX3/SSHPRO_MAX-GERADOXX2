@@ -115,11 +115,11 @@ fun_permisoarq () {
 
 fun_montaip () {
 fun_ip
-sed -i "s;18.229.123.112;$IP;g" /var/www/html/scripts/Plus
+sed -i "s;177.153.59.147;$IP;g" /var/www/html/scripts/Plus
 fun_ip
-sed -i "s;18.229.123.112;$IP;g" /home/list
+sed -i "s;177.153.59.147;$IP;g" /home/list
 fun_ip
-sed -i "s;18.229.123.112;$IP;g" /home/index.html
+sed -i "s;177.153.59.147;$IP;g" /home/index.html
 sleep 3s
 }
 
