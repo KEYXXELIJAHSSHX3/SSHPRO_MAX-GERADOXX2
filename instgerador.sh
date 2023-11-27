@@ -91,6 +91,10 @@ wget https://github.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/raw/main/Install/S
 unzip SSHPRO_MAX-v2.0.zip
 rm -rf SSHPRO_MAX-v2.0.zip
 cd
+cd /home/_script_$/crz
+wget https://github.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/raw/main/Modulos/versao
+cd
+
 }
 
 fun_instsis () {
