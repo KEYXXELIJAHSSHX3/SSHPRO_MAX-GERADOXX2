@@ -110,16 +110,16 @@ fun_permisoarq () {
     chmod +x /bin/key
     chmod +x  /var/www/html/Plus
     chmod +x  /var/www/html/script/versao
-    chmod 777 /home/_script_$/crz/*
+    chmod 777 /home/_script_$/crz/versao
 }
 
 fun_montaip () {
 fun_ip
-sed -i "s;177.153.62.105;$IP;g" /var/www/html/scripts/Plus
+sed -i "s;191.252.182.119;$IP;g" /var/www/html/scripts/Plus
 fun_ip
-sed -i "s;177.153.62.105;$IP;g" /home/list
+sed -i "s;191.252.182.119;$IP;g" /home/list
 fun_ip
-sed -i "s;177.153.62.105;$IP;g" /home/index.html
+sed -i "s;191.252.182.119;$IP;g" /home/index.html
 sleep 3s
 }
 
