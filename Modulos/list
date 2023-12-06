@@ -2,7 +2,7 @@
 #====================================================
 #	SCRIPT:  SSH PRO MAX
 #====================================================
-_lvk=$(wget -qO- 191.252.182.119/script/versao)
+_lvk=$(wget -qO- scriptpromax.elijahssh.shop/script/versao)
 IP=$(wget -qO- sshplus.xyz/meuip.php)
 IP2=$(wget -qO- http://whatismyip.akamai.com/)
 [[ "$IP" != "$IP2" ]] && ipdovps="$IP2" || ipdovps="$IP"
