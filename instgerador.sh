@@ -119,11 +119,11 @@ fun_permisoarq () {
 
 fun_montaip () {
 fun_ip
-sed -i "s;191.252.182.119;$IP;g" /var/www/html/scripts/Plus
+sed -i "s;scriptpromax.elijahssh.shop;$IP;g" /var/www/html/scripts/Plus
 fun_ip
-sed -i "s;191.252.182.119;$IP;g" /home/list
+sed -i "s;scriptpromax.elijahssh.shop;$IP;g" /home/list
 fun_ip
-sed -i "s;191.252.182.119;$IP;g" /home/index.html
+sed -i "s;scriptpromax.elijahssh.shop;$IP;g" /home/index.html
 sleep 3s
 }
 
