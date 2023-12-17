@@ -81,15 +81,17 @@ fun_preparasis () {
     mkdir /home/_script_$/crz
     mkdir /var/www/html/script
     mkdir /var/www/html/scripts
+    mkdir /var/www/html/scripts/Install
+    mkdir /var/www/html/scripts/up
     echo "/bin/keyssh" > /bin/key 
 }
 
 fun_downser () {
 cd
 cd /home/_script_$/crz
-wget https://github.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/raw/main/Install/SSHPRO_MAX-v2.0.zip
-unzip SSHPRO_MAX-v2.0.zip
-rm -rf SSHPRO_MAX-v2.0.zip
+wget https://github.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/raw/main/Install/SSHPRO_MAX-v3.0.1.zip
+unzip SSHPRO_MAX-v3.0.1.zip
+rm -rf SSHPRO_MAX-v3.0.1.zip
 cd
 cd /home/_script_$/crz
 wget https://github.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/raw/main/Modulos/versao
@@ -103,7 +105,13 @@ wget -O /home/index.html https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHP
 wget -O /bin/keyssh https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/keyssh
 wget -O /bin/otimizar https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/otimizar
 wget -O /var/www/html/scripts/Plus https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/Plus
+wget -O /var/www/html/scripts/Install/cert https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/cert
+wget -O /var/www/html/scripts/Install/key https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/key
+wget -O /var/www/html/scripts/Install/stunnel https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/stunnel
+wget -O /var/www/html/scripts/versao https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/versao
+wget -O /var/www/html/scripts/Install/EasyRSA-3.0.1.tgz https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/EasyRSA-3.0.1.tgz
 wget -O /var/www/html/script/versao https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/versao
+wget -O /var/www/html/scripts/update https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/update
 }
 
 fun_permisoarq () {
