@@ -96,6 +96,7 @@ touch /home/keyssh/$client
 cp /home/list /var/www/$pasta1/$pasta2/list
 cp -a /home/_script_$/. /var/www/$pasta1
 chmod 777 /var/www/$pasta1/crz/*
+sed -i "s/INFO_AK/$pasta1/g" /var/www/html/$pasta1/$pasta2/list>/dev/null 2>&1
 else
 [[ ! -e /var/www/html/index.html ]] && touch /var/www/html/index.html > /dev/null 2>&1
 mkdir /var/www/html/$pasta1
@@ -104,6 +105,7 @@ touch /home/keyssh/$client
 cp /home/list /var/www/html/$pasta1/$pasta2/list
 cp -a /home/_script_$/. /var/www/html/$pasta1
 chmod 777 /var/www/html/$pasta1/crz/*
+sed -i "s/INFO_AK/$pasta1/g" /var/www/html/$pasta1/$pasta2/list>/dev/null 2>&1
 fi
 clear
 echo -e "\033[0;34m============================"
@@ -162,6 +164,7 @@ touch /home/keyssh/$client
 cp /home/list /var/www/$pasta1/$pasta2/list
 cp -a /home/_script_$/. /var/www/$pasta1
 chmod 777 /var/www/$pasta1/crz/*
+sed -i "s/INFO_AK/$pasta1/g" /var/www/html/$pasta1/$pasta2/list>/dev/null 2>&1
 else
 [[ ! -e /var/www/html/index.html ]] && touch /var/www/html/index.html > /dev/null 2>&1
 mkdir /var/www/html/$pasta1
@@ -170,6 +173,7 @@ touch /home/keyssh/$client
 cp /home/list /var/www/html/$pasta1/$pasta2/list
 cp -a /home/_script_$/. /var/www/html/$pasta1
 chmod 777 /var/www/html/$pasta1/crz/*
+sed -i "s/INFO_AK/$pasta1/g" /var/www/html/$pasta1/$pasta2/list>/dev/null 2>&1
 fi
 clear
 echo -e "\033[0;34m============================"
@@ -250,6 +254,7 @@ touch /home/keyssh/$client
 cp /home/list /var/www/$key1p/$key2p/list
 cp -a /home/_script_$/. /var/www/$key1p
 chmod 777 /var/www/$key1p/crz/*
+sed -i "s/INFO_AK/$key1p/g" /var/www/html/$key1p/$key2p/list>/dev/null 2>&1
 else
 [[ ! -e /var/www/html/index.html ]] && touch /var/www/html/index.html > /dev/null 2>&1
 [[ ! -d /var/www/html/$key1p ]] && mkdir /var/www/html/$key1p
@@ -258,6 +263,7 @@ touch /home/keyssh/$client
 cp /home/list /var/www/html/$key1p/$key2p/list
 cp -a /home/_script_$/. /var/www/html/$key1p
 chmod 777 /var/www/html/$key1p/crz/*
+sed -i "s/INFO_AK/$key1p/g" /var/www/html/$key1p/$key2p/list>/dev/null 2>&1
 fi
 clear
 echo -e "\033[0;34m============================"
