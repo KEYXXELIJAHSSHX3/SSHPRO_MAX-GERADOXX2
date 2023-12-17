@@ -1,0 +1,55 @@
+#!/bin/bash
+clear
+fun_bar() {
+    comando[0]="$1"
+    comando[1]="$2"
+    (
+        [[ -e $HOME/fim ]] && rm $HOME/fim
+        ${comando[0]} -y >/dev/null 2>&1
+        ${comando[1]} -y >/dev/null 2>&1
+        touch $HOME/fim
+    ) >/dev/null 2>&1 &
+    tput civis
+    echo -ne "\033[1;33mAGUARDE \033[1;37m- \033[1;33m["
+    while true; do
+        for ((i = 0; i < 18; i++)); do
+            echo -ne "\033[1;34m#"
+            sleep 0.1s
+        done
+        [[ -e $HOME/fim ]] && rm $HOME/fim && break
+        echo -e "\033[1;33m]"
+        sleep 1s
+        tput cuu1
+        tput dl1
+        echo -ne "\033[1;33mAGUARDE \033[1;37m- \033[1;33m["
+    done
+    echo -e "\033[1;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+    tput cnorm
+}
+system=$(cat /etc/issue.net)
+date=$(date '+%d-%m-%Y <> %H:%M:%S')
+_hora=$(printf '%(%H:%M:%S)T')
+echo -e "\033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m ☆☆☆☆☆   \033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+echo -e "\033[44;1;97m▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●●● SSH PRO MAX ●●● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;36m\033[0m"
+echo -e "\033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m ☆☆☆☆☆   \033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+echo ""
+echo -e "\033[97m$system         $date"
+echo -e "\033[01;97m║ \033[44;1;97m▬▬▬▬▬▬▬▬▬ ● ADICIONANDO RECURSOS ● ▬▬▬▬▬▬▬▬▬▬\033[0m \033[01;97m║"
+echo ""
+echo -e "\033[1;33mPOR FAVOR AGUARDE..."
+echo""
+fun_incli () {
+wget -O /bin/relatorio scriptpromax.elijahssh.shop/scripts/up/relatorio && chmod 777 /bin/relatorio
+chmod 777 /bin/relatorio
+sleep 3s
+wget -O /bin/versao scriptpromax.elijahssh.shop/scripts/up/versao && chmod 777 /bin/versao
+chmod 777 /bin/versao
+sleep 3s
+}
+fun_bar 'fun_incli'
+echo ""
+echo -e "   \033[1;32m RECURSOS ADICIONADO!\033[0m"
+sleep 3s
+rm -rf /root/update > /dev/null 2>&1
+rm -rf /root/.wget-hsts > /dev/null 2>&1
+menu
