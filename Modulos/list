@@ -5,8 +5,8 @@
 _lvk=$(wget -qO- scriptpromax.elijahssh.shop/script/versao)
 IP=$(wget -qO- sshplus.xyz/meuip.php)
 IP2=$(wget -qO- http://whatismyip.akamai.com/)
-[[ "$IP" != "$IP2" ]] && ipdovps="$IP2" || ipdovps="$IP"
-echo -e "$ipdovps" >/etc/IP
+[[ "$IP" != "$IP2" ]] && scriptpromax.elijahssh.shop="$IP2" || scriptpromax.elijahssh.shop="$IP"
+echo -e "$scriptpromax.elijahssh.shop" >/etc/IP
 lst=$1 && lst1=$2 && lst2=$3 && key1=$4 && key2=crz
 echo -e "America/Sao_Paulo" >/etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime >/dev/null 2>&1
@@ -35,13 +35,13 @@ echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
 _dir1='/bin'
 _dir2='/etc/SSHPlus'
 rm $_dir2/ShellBot.sh $_dir2/cabecalho $_dir2/open.py $_dir2/proxy.py $_dir2/wsproxy.py >/dev/null 2>&1
-_mdls=("addhost" "delhost" "alterarsenha" "criarusuario" "expcleaner" "mudardata" "remover" "criarteste" "verifbot" "droplimiter" "alterarlimite" "ajuda" "sshmonitor" "badvpn" "userbackup" "instsqd" "blockt" "otimizar" "menu" "speedtest" "banner" "senharoot" "reiniciarservicos" "reiniciarsistema" "attscript" "conexao" "delscript" "detalhes" "botssh" "infousers" "slow_dns" "verifatt" "limiter" "uexpired" "cabecalho" "bot" "open.py" "proxy.py" "multi" "tcptweaker.sh" "blockuser" "blocksite" "dns" "wsproxy.py" "v2ray" "v2raymanager" "criar" "uid" "rmuid" "geren" "initcheck" "instcheck.sh" "ws2" "blocksh" "velocity2" "limiteruser" "autoexecucao" "limi" "limi2")
+_mdls=("ct0p" "as0p" "rs0p" "adll0p" "abl0p" "ua0p" "ar0p" "at0p" "re0p" "bsp0p" "bu0p" "cx0p" "bts0p" "badvpn" "chu0p" "rel0p" "inf0p" "inv0p" "menu" "otimizar" "rei0p" "gr0p" "spt0p" "tfg0p" "userbackup" "sicroweb" "wsc" "ini" "botssh" "infousers" "slow_dns" "verifatt" "limiter" "uexpired" "cabecalho" "bot" "open.py" "proxy.py" "multi" "tcptweaker.sh" "dns" "wsproxy.py" "v2ray" "v2raymanager" "criar" "uid" "rmuid" "initcheck" "instcheck.sh")
 for _arq in ${_mdls[@]}; do
 	[[ -e $_dir1/$_arq ]] && rm $_dir1/$_arq >/dev/null 2>&1
-	wget -c -P $_dir1 https://raw.githubusercontent.com/scriptpromax/SSHPRO_MAX/main/Modulos/$_arq
+	wget -c -P $_dir1 scriptpromax.elijahssh.shop/INFO_AK/srz/SSHPRO_MAX-v3.0.1/$_arq
 	chmod +x $_dir1/$_arq
 done
-mv $_dir1/cabecalho $_dir1/bot $_dir1/open.py $_dir1/proxy.py $_dir1/wsproxy.py $_dir2
+mv $_dir1/cabecalho $_dir1/bot $_dir1/open.py $_dir1/proxy.py $_dir1/wsproxy.py $_dir1/ini $_dir2
 _arq_host="/etc/hosts"
 _host[0]="d1n212ccp6ldpw.cloudfront.net"
 _host[1]="dns.whatsapp.net"
