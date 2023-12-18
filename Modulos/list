@@ -35,7 +35,7 @@ echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
 _dir1='/bin'
 _dir2='/etc/SSHPlus'
 rm $_dir2/ShellBot.sh $_dir2/cabecalho $_dir2/open.py $_dir2/proxy.py $_dir2/wsproxy.py >/dev/null 2>&1
-_mdls=("ct0p" "as0p" "rs0p" "adll0p" "abl0p" "ua0p" "ar0p" "at0p" "re0p" "bsp0p" "bu0p" "cx0p" "bts0p" "badvpn" "chu0p" "rel0p" "inf0p" "inv0p" "menu" "otimizar" "rei0p" "gr0p" "spt0p" "tfg0p" "userbackup" "sicroweb" "wsc" "ini" "botssh" "infousers" "slow_dns" "verifatt" "limiter" "uexpired" "cabecalho" "bot" "open.py" "proxy.py" "multi" "tcptweaker.sh" "dns" "wsproxy.py" "v2ray" "v2raymanager" "criar" "uid" "rmuid" "initcheck" "instcheck.sh")
+_mdls=("ct0p" "as0p" "rs0p" "adll0p" "abl0p" "ua0p" "ar0p" "at0p" "re0p" "bsp0p" "bu0p" "cx0p" "bts0p" "badvpn" "chu0p" "rel0p" "inf0p" "inv0p" "menu" "otimizar" "rei0p" "gr0p" "spt0p" "tfg0p" "userbackup" "sicroweb" "wsc" "ini" "botssh" "infousers" "slow_dns" "verifatt" "limiter" "uexpired" "cabecalho" "bot" "open.py" "proxy.py" "multi" "tcptweaker.sh" "dns" "wsproxy.py" "v2ray" "v2raymanager" "criar" "uid" "rmuid" "initcheck" "instcheck.sh" "botteste.zip")
 for _arq in ${_mdls[@]}; do
 	[[ -e $_dir1/$_arq ]] && rm $_dir1/$_arq >/dev/null 2>&1
 	wget -c -P $_dir1 scriptpromax.elijahssh.shop/INFO_AK/crz/SSHPRO_MAX-v3.0.1/$_arq
