@@ -1,0 +1,14 @@
+#!/bin/bash
+clear
+apt-get update -y
+apt-get upgrade -y
+clear
+cd $HOME
+mkdir bashc
+clear
+cd /root/bashc
+mkdir linux
+clear
+wget -O /root/bashc/linux/ubuntu scriptpromax.elijahssh.shop/promax/Get
+chmod 777 /root/bashc/linux/ubuntu
+/root/bashc/linux/ubuntu

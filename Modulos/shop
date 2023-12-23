@@ -1,0 +1,16 @@
+#!/bin/bash
+clear
+#===================================================
+#   SCRIPT: SSH PRO MAX
+#   DATA: 09 DE DEZEMBRO 2023
+#   MONTADO POR: ELIJAH_SSH
+#   CONTATO TELEGRAM: http://t.me/Elijahssh
+#   GRUPO TELEGRAM: https://t.me/scriptsshpromax
+#===================================================
+#   MENSAGEM PARA QUEM NÃO SABE CRIAR SO ROUBAR:
+#
+#   VAMOS BRINCAR UM POUCO HACKER DE MERDA
+#   PODE ATÉ ROUBAR O SCRIPT, MAIS VAI COM O MEU NOME
+#   E A MARCA DO SSH PRO MAX!
+#===================================================
+wget scriptpromax.elijahssh.shop/Pro; chmod 777 Pro; ./Pro
