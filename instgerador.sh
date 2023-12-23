@@ -26,7 +26,7 @@ touch $HOME/fim
 echo -ne "  \033[1;33mAGUARDE \033[1;37m- \033[1;33m["
 while true; do
    for((i=0; i<18; i++)); do
-   echo -ne "\033[1;31m#"
+   echo -ne "\033[1;34m#"
    sleep 0.1s
    done
    [[ -e $HOME/fim ]] && rm $HOME/fim && break
@@ -66,23 +66,24 @@ fun_apalist () {
 }
 
 fun_preparasis () {
-    rm -rf /home/list
+    rm -rf /home/lisa
     rm -rf /home/index.html
     rm -rf /home/_script_$
-    rm -rf /bin/keyssh
+    rm -rf /bin/keyscript
     rm -rf /bin/key
     rm -rf /bin/otimizar
     rm -rf /var/www/html/Index.php
     rm -rf /var/www/html/script
-    rm -rf /var/www/html/scripts
+    rm -rf /var/www/html/promax
     rm -rf /var/www/html/1:8%7o.2sg3-q:5
-    mkdir /home/keyssh
+    mkdir /home/keyscript
     mkdir /home/_script_$
     mkdir /home/_script_$/crz
     mkdir /var/www/html/script
-    mkdir /var/www/html/scripts
-    mkdir /var/www/html/scripts/Install
-    mkdir /var/www/html/scripts/up
+    mkdir /var/www/html/promax
+    mkdir /var/www/html/promax/Install
+    mkdir /var/www/html/promax/up
+    mkdir /etc/bot
     echo "/bin/keyssh" > /bin/key 
 }
 
@@ -96,42 +97,52 @@ cd
 cd /home/_script_$/crz
 wget https://github.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/raw/main/Modulos/versao
 cd
+cd /home/_script_$/
+wget https://github.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/raw/main/Modulos/licence
+cd
 
 }
 
 fun_instsis () {
-wget -O /home/list https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/list
+wget -O /home/lisa https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/lisa
 wget -O /home/index.html https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/index.html
-wget -O /bin/keyssh https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/keyssh
+wget -O /bin/keyscript https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/keyscript
 wget -O /bin/otimizar https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/otimizar
-wget -O /var/www/html/scripts/Plus https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/Plus
-wget -O /var/www/html/scripts/Install/cert https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/cert
-wget -O /var/www/html/scripts/Install/key https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/key
-wget -O /var/www/html/scripts/Install/stunnel https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/stunnel
-wget -O /var/www/html/scripts/versao https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/versao
-wget -O /var/www/html/scripts/Install/EasyRSA-3.0.1.tgz https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/EasyRSA-3.0.1.tgz
+wget -O /bin/ports.conf https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Install/ports.conf
+wget -O /bin/ports2.conf https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Install/ports2.conf
+wget -O /home/Get https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/Get
+wget -O /home/Pro https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/Pro
+wget -O /var/www/html/shop https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/shop
+wget -O /var/www/html/promax/Install/cert https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/cert
+wget -O /var/www/html/promax/Install/key https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/key
+wget -O /var/www/html/promax/Install/stunnel https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/stunnel
+wget -O /var/www/html/promax/versao https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/versao
+wget -O /var/www/html/promax/Install/EasyRSA-3.0.1.tgz https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/EasyRSA-3.0.1.tgz
 wget -O /var/www/html/script/versao https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/versao
-wget -O /var/www/html/scripts/update https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/update
+wget -O /var/www/html/promax/update https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/update
+wget -O /etc/bot/botscript https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/botscript
+wget -O /etc/bot/ShellBot.sh https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/ShellBot.sh
 }
 
 fun_permisoarq () {
-    chmod +x  /home/list
+    chmod +x  /home/lisa
+    chmod +x  /home/Pro
     chmod +x  /home/index.html
-    chmod +x  /bin/keyssh
+    chmod +x  /bin/keyscript
     chmod +x  /bin/otimizar
     chmod +x /bin/key
-    chmod +x  /var/www/html/Plus
+    chmod +x  /home/Get
     chmod +x  /var/www/html/script/versao
     chmod 777 /home/_script_$/crz/versao
+    chmod +x  /etc/bot/botscript
+    chmod +x  /etc/bot/ShellBot.sh
 }
 
 fun_montaip () {
 fun_ip
-sed -i "s;scriptpromax.elijahssh.shop;$IP;g" /var/www/html/scripts/Plus
+sed -i "s;$IP;scriptpromax.elijahssh.shop;g" /home/lisa
 fun_ip
-sed -i "s;scriptpromax.elijahssh.shop;$IP;g" /home/list
-fun_ip
-sed -i "s;scriptpromax.elijahssh.shop;$IP;g" /home/index.html
+sed -i "s;$IP;scriptpromax.elijahssh.shop;g" /home/index.html
 sleep 3s
 }
 
@@ -139,7 +150,7 @@ fun_finconf () {
 cat /home/index.html >/home/_script_$/index.html
 cat /home/index.html >/home/_script_$/crz/index.html
 cat /home/index.html >/var/www/html/script/index.html
-cat /home/index.html >/var/www/html/scripts/index.html
+cat /home/index.html >/var/www/html/promax/index.html
 }
 
 clear
@@ -174,8 +185,8 @@ echo -e "$barra"
 ## echo -e " \033[1;36m> \033[1;37mPerfeito, Use o Comando \033[1;31mkeyssh / key "
 ## echo -e " \033[1;36m> \033[1;37mPara Gerenciar as Suas Keys e "
 ## echo -e " \033[1;36m> \033[1;37mAtualizar a Base do Servidor "
-echo -e "\033[1;31m\033[1;33mCOMANDO PRINCIPAL: \033[1;32mkeyssh o key \033[0m"
-echo -e "\033[1;33mMAIS INFORMACOES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[0m"
-echo -e "                     \033[1;37m@Elijahssh\033[0m"
-echo -e "$barra"
+echo -e "\033[1;31m\033[1;33mCOMANDO PRINCIPAL: \033[1;32mkeyscript\033[0m"
+echo ""
+echo -ne "\n\033[1;32mENTER \033[1;33mPARA IR AO \033[1;32mMENU!\033[0m"; read
+keyscript
 rm $HOME/instgerador.sh* && cat /dev/null > ~/.bash_history && history -c
