@@ -50,16 +50,11 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 
 fun_attrepo () {
     apt-get update -y
-    apt-get upgrade -y
-    apt-get update -y
-        [[ ! -d /usr/share/.ubuntu ]] && mkdir /usr/share/.ubuntu
-        echo "crz: $(date)" >/usr/share/.ubuntu/.ubuntu   
+    apt-get upgrade -y   
         _pacotes=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip" "python" "at")
         for _prog in ${_pacotes[@]}; do
             apt install $_prog -y
-        done
-        apt install speedtest-cli
-        apt install build-essential       
+        done       
     [[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp
     ufw allow 80/tcp
     ufw allow 3128/tcp
@@ -94,8 +89,6 @@ dpkg-reconfigure --frontend noninteractive tzdata >/dev/null 2>&1
 [[ ! -e /etc/bot/lista_ativos ]] && touch /etc/bot/lista_ativos
 netstat -nplt | grep -w 'apache2' | grep -w '80' && sed -i "s/Listen 80/Listen 81/g" /etc/apache2/ports.conf && service apache2 restart
 [[ "$(grep -o '#Port 22' /etc/ssh/sshd_config)" == "#Port 22" ]] && sed -i "s;#Port 22;Port 22;" /etc/ssh/sshd_config && service ssh restart
-grep -v "^PasswordAuthentication" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
-echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
 _arq_host="/etc/hosts"
 _host[0]="d1n212ccp6ldpw.cloudfront.net"
 _host[1]="dns.whatsapp.net"
