@@ -7,7 +7,6 @@ api_bot=$1
 id_admin=$2
 [[ -z $api_bot ]] && exit 0
 [[ -z $id_admin ]] && exit 0
-[[ ! -e /usr/lib/licence ]] && exit 0
 ativos='/etc/bot/lista_ativos'
 ShellBot.init --token "$api_bot" --monitor --return map --flush
 ShellBot.username
@@ -72,14 +71,14 @@ if [[ "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
 [[ ! -d /var/www/$key1p ]] && mkdir /var/www/$key1p
 [[ ! -d /var/www/$key1p/$key2p ]] && mkdir /var/www/$key1p/$key2p
 touch /home/keyssh/$client
-cp /home/list /var/www/$key1p/$key2p/list
+cp /home/lisa /var/www/$key1p/$key2p/lisa
 cp -a /home/_script_$/. /var/www/$key1p
 chmod 777 /var/www/$key1p/crz/*
-sed -i "s/INFO_AK/$key1p/g" /var/www/html/$key1p/$key2p/list>/dev/null 2>&1
-shc -v -r -f /var/www/html/$key1p/$key2p/list
-rm /var/www/html/$key1p/$key2p/list
-rm /var/www/html/$key1p/$key2p/list.x.c
-mv /var/www/html/$key1p/$key2p/list.x /var/www/html/$key1p/$key2p/list
+sed -i "s/INFO_AK/$key1p/g" /var/www/html/$key1p/$key2p/lisa>/dev/null 2>&1
+shc -v -r -f /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/$key1p/$key2p/lisa.x.c
+mv /var/www/html/$key1p/$key2p/lisa.x /var/www/html/$key1p/$key2p/lisa
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 else
@@ -87,14 +86,14 @@ else
 [[ ! -d /var/www/html/$key1p ]] && mkdir /var/www/html/$key1p
 [[ ! -d /var/www/html/$key1p/$key2p ]] && mkdir /var/www/html/$key1p/$key2p
 touch /home/keyssh/$client
-cp /home/list /var/www/html/$key1p/$key2p/list
+cp /home/lisa /var/www/html/$key1p/$key2p/lisa
 cp -a /home/_script_$/. /var/www/html/$key1p
 chmod 777 /var/www/html/$key1p/crz/*
-sed -i "s/INFO_AK/$key1p/g" /var/www/html/$key1p/$key2p/list>/dev/null 2>&1
-shc -v -r -f /var/www/html/$key1p/$key2p/list
-rm /var/www/html/$key1p/$key2p/list
-rm /var/www/html/$key1p/$key2p/list.x.c
-mv /var/www/html/$key1p/$key2p/list.x /var/www/html/$key1p/$key2p/list
+sed -i "s/INFO_AK/$key1p/g" /var/www/html/$key1p/$key2p/lisa>/dev/null 2>&1
+shc -v -r -f /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/$key1p/$key2p/lisa.x.c
+mv /var/www/html/$key1p/$key2p/lisa.x /var/www/html/$key1p/$key2p/lisa
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 fi
@@ -188,14 +187,14 @@ if [[ "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
 [[ ! -d /var/www/$key1p ]] && mkdir /var/www/$key1p
 [[ ! -d /var/www/$key1p/$key2p ]] && mkdir /var/www/$key1p/$key2p
 touch /home/keyssh/$client
-cp /home/list /var/www/$key1p/$key2p/list
+cp /home/lisa /var/www/$key1p/$key2p/lisa
 cp -a /home/_script_$/. /var/www/$key1p
 chmod 777 /var/www/$key1p/crz/*
-sed -i "s/INFO_AK/$key1p/g" /var/www/html/$key1p/$key2p/list>/dev/null 2>&1
-shc -v -r -f /var/www/html/$key1p/$key2p/list
-rm /var/www/html/$key1p/$key2p/list
-rm /var/www/html/$key1p/$key2p/list.x.c
-mv /var/www/html/$key1p/$key2p/list.x /var/www/html/$key1p/$key2p/list
+sed -i "s/INFO_AK/$key1p/g" /var/www/html/$key1p/$key2p/lisa>/dev/null 2>&1
+shc -v -r -f /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/$key1p/$key2p/lisa.x.c
+mv /var/www/html/$key1p/$key2p/lisa.x /var/www/html/$key1p/$key2p/lisa
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 else
@@ -203,14 +202,14 @@ else
 [[ ! -d /var/www/html/$key1p ]] && mkdir /var/www/html/$key1p
 [[ ! -d /var/www/html/$key1p/$key2p ]] && mkdir /var/www/html/$key1p/$key2p
 touch /home/keyssh/$client
-cp /home/list /var/www/html/$key1p/$key2p/list
+cp /home/lisa /var/www/html/$key1p/$key2p/lisa
 cp -a /home/_script_$/. /var/www/html/$key1p
 chmod 777 /var/www/html/$key1p/crz/*
-sed -i "s/INFO_AK/$key1p/g" /var/www/html/$key1p/$key2p/list>/dev/null 2>&1
-shc -v -r -f /var/www/html/$key1p/$key2p/list
-rm /var/www/html/$key1p/$key2p/list
-rm /var/www/html/$key1p/$key2p/list.x.c
-mv /var/www/html/$key1p/$key2p/list.x /var/www/html/$key1p/$key2p/list
+sed -i "s/INFO_AK/$key1p/g" /var/www/html/$key1p/$key2p/lisa>/dev/null 2>&1
+shc -v -r -f /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/$key1p/$key2p/lisa.x.c
+mv /var/www/html/$key1p/$key2p/lisa.x /var/www/html/$key1p/$key2p/lisa
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 fi
@@ -312,7 +311,6 @@ criar_rev() {
         t_rev='subrevenda'
         echo -e "SUBREVENDA: $u_rev LIMITE_SUBREVENDA: $l_rev" >>/etc/bot/revenda/${message_from_username}/${message_from_username}
     }
-    touch /etc/bot/lista_ativos
     mkdir /etc/bot/revenda/"$u_rev"
     mkdir /etc/bot/revenda/"$u_rev"/usuarios
     touch /etc/bot/revenda/"$u_rev"/$u_rev

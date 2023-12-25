@@ -1,0 +1,51 @@
+#!/bin/bash
+#=================================================#
+#SCRIPT MONTADO POR: ELIJAHSSH
+#=================================================#
+system=$(cat /etc/issue.net)
+date=$(date '+%d-%m-%Y <> %H:%M:%S')
+_hora=$(printf '%(%H:%M:%S)T')
+fun_bar() {
+    comando[0]="$1"
+    comando[1]="$2"
+    (
+        [[ -e $HOME/fim ]] && rm $HOME/fim
+        ${comando[0]} -y >/dev/null 2>&1
+        ${comando[1]} -y >/dev/null 2>&1
+        touch $HOME/fim
+    ) >/dev/null 2>&1 &
+    tput civis
+    echo -ne "\033[1;33mAGUARDE \033[1;37m- \033[1;33m["
+    while true; do
+        for ((i = 0; i < 18; i++)); do
+            echo -ne "\033[1;34m#"
+            sleep 0.1s
+        done
+        [[ -e $HOME/fim ]] && rm $HOME/fim && break
+        echo -e "\033[1;33m]"
+        sleep 1s
+        tput cuu1
+        tput dl1
+        echo -ne "\033[1;33mAGUARDE \033[1;37m- \033[1;33m["
+    done
+    echo -e "\033[1;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+    tput cnorm
+}
+[[ $(screen -list| grep -c 'bot_teste') == '0' ]] && {
+    echo -ne "\n\033[1;32mINFORME O TOKEN\033[1;37m: "; read token
+    echo -ne "\033[1;32mINFORME SEU ID:\033[1;37m "; read iduser
+    cd etc/bot
+    screen -dmS bot_teste ./botscript $token $iduser > /dev/null 2>&1
+    echo ""
+    echo -e "\033[1;32mBOT ATIVADO!"
+    sleep 3s
+    clear
+    keyscript
+} || {
+    echo ""
+    screen -r -S "bot_teste" -X quit
+    clear && echo "BOT DESATIVADO"
+    sleep 3s
+    clear
+    keyscript
+}

