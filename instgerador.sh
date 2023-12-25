@@ -50,88 +50,7 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 
 fun_attrepo () {
     apt-get update -y
-    apt-get upgrade -y   
-        _pacotes=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip" "python" "at")
-        for _prog in ${_pacotes[@]}; do
-            apt install $_prog -y
-        done       
-    [[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp
-    ufw allow 80/tcp
-    ufw allow 3128/tcp
-    ufw allow 8799/tcp
-    ufw allow 8080/tcp   
-    apt-get install python -y >/dev/null 2>&1
-    apt-get install python2 -y >/dev/null 2>&1
-    apt-get install python3.6 -y >/dev/null 2>&1
-    apt-get install python3.7 -y >/dev/null 2>&1
-    apt-get install python3.8 -y >/dev/null 2>&1
-    apt-get install python3.9 -y >/dev/null 2>&1
-    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1 >/dev/null 2>&1
-    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 3 >/dev/null 2>&1
-    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 2 >/dev/null 2>&1
-    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 4 >/dev/null 2>&1
-    apt install pip -y
-    apt install python3-pip -y
-    apt install socat -y
-}
-
-fun_lisa () {
-echo -e "America/Sao_Paulo" >/etc/timezone
-ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime >/dev/null 2>&1
-dpkg-reconfigure --frontend noninteractive tzdata >/dev/null 2>&1
-[[ ! -d /etc/SSHPlus ]] && mkdir /etc/SSHPlus
-[[ ! -d /etc/SSHPlus/v2ray ]] && mkdir /etc/SSHPlus/v2ray
-[[ ! -d /etc/SSHPlus/senha ]] && mkdir /etc/SSHPlus/senha
-[[ ! -e /etc/SSHPlus/Exp ]] && touch /etc/SSHPlus/Exp
-[[ ! -d /etc/SSHPlus/.tmp ]] && mkdir /etc/SSHPlus/.tmp
-[[ ! -d /etc/bot ]] && mkdir /etc/bot
-[[ ! -d /etc/bot/revenda ]] && mkdir /etc/bot/revenda
-[[ ! -e /etc/bot/lista_ativos ]] && touch /etc/bot/lista_ativos
-netstat -nplt | grep -w 'apache2' | grep -w '80' && sed -i "s/Listen 80/Listen 81/g" /etc/apache2/ports.conf && service apache2 restart
-[[ "$(grep -o '#Port 22' /etc/ssh/sshd_config)" == "#Port 22" ]] && sed -i "s;#Port 22;Port 22;" /etc/ssh/sshd_config && service ssh restart
-_arq_host="/etc/hosts"
-_host[0]="d1n212ccp6ldpw.cloudfront.net"
-_host[1]="dns.whatsapp.net"
-_host[2]="portalrecarga.vivo.com.br/recarga"
-_host[3]="navegue.vivo.com.br/controle/"
-_host[4]="navegue.vivo.com.br/pre/"
-_host[5]="www.whatsapp.net"
-_host[6]="/SSHPLUS?"
-for host in ${_host[@]}; do
-	if [[ "$(grep -w "$host" $_arq_host | wc -l)" = "0" ]]; then
-		sed -i "3i\127.0.0.1 $host" $_arq_host
-	fi
-done
-[[ ! -e /etc/autostart ]] && {
-	echo '#!/bin/bash
-clear
-#INICIO AUTOMATICO' >/etc/autostart
-	chmod +x /etc/autostart
-} || {
-	[[ $(ps x | grep "bot_plus" | grep -v grep | wc -l) != '0' ]] && wget -qO- https://raw.githubusercontent.com/shellscriptx/shellbot/master/ShellBot.sh >/etc/SSHPlus/ShellBot.sh
-	for proc in $(ps x | grep 'dmS' | grep -v 'grep' | awk {'print $1'}); do
-		screen -r -S "$proc" -X quit
-	done
-	screen -wipe >/dev/null
-	echo '#!/bin/bash
-clear
-#INICIO AUTOMATICO' >/etc/autostart
-	chmod +x /etc/autostart
-}
-crontab -r >/dev/null 2>&1
-(
-	crontab -l 2>/dev/null
-	echo "@daily /bin/verifatt"
-	echo "@reboot /etc/autostart"
-	echo "* * * * * /etc/autostart"
-	echo "0 */6 * * * /bin/uexpired"
-) | crontab -
-echo "$_lvk" | sed -n '1 p' | cut -d' ' -f2 >/bin/versao && cat /bin/versao >/home/sshplus
-wget https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 >/dev/null 2>&1
-chmod +x jq-linux64 && mv jq-linux64 $(which jq)
-service cron restart >/dev/null 2>&1
-service ssh restart >/dev/null 2>&1
-[[ -d /var/www/html/openvpn ]] && service apache2 restart >/dev/null 2>&1
+    apt-get upgrade -y
 }
 
 fun_instrec () {
@@ -263,8 +182,6 @@ tput cuu1 && tput dl1
 tput cuu1 && tput dl1
 echo -e "\033[1;33mATUALIZANDO REPOSITÓRIOS..... \033[1;32mAGUARDE"
 fun_bar 'fun_attrepo'
-echo -e "\033[1;33mINCLIMENTANDO RECURSOS..... \033[1;32mAGUARDE"
-fun_bar 'fun_lisa'
 echo -e "\033[1;33mINSTALANDO RECURSOS.......... \033[1;32mAGUARDE"
 fun_bar 'fun_instrec'
 echo -e "\033[1;33mCONFIGURANDO APACHE.......... \033[1;32mAGUARDE"
