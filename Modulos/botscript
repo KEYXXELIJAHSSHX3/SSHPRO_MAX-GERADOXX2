@@ -1,13 +1,13 @@
 #!/bin/bash
 clear
-[[ ! -d /etc/bot ]] && exit 0
-[[ ! -d /etc/bot ]] && exit 0
+[[ ! -d /root/BOT ]] && exit 0
+[[ ! -d /root/BOT ]] && exit 0
 source ShellBot.sh
 api_bot=$1
 id_admin=$2
 [[ -z $api_bot ]] && exit 0
 [[ -z $id_admin ]] && exit 0
-ativos='/etc/bot/lista_ativos'
+ativos='/root/BOT/lista_ativos'
 ShellBot.init --token "$api_bot" --monitor --return map --flush
 ShellBot.username
 
@@ -123,7 +123,7 @@ exit" > /home/keyssh/$client
 fi
 bash /home/keyssh/$client &
     ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-	--text "$(echo -e "<b>✅SCRIPT GERADO COM SUCESSO✅\n\nSCRIPT E KEY 👇 </b>\n\n <code>apt-get update -y; apt-get upgrade -y; wget scriptpromax.elijahssh.shop/scripts/Plus; chmod 777 Plus; ./Plus</code>\n\n<b>KEY:</b> <code>$key1p$signus$key2p</code>\n\n⏳ VENCE EM: 15 MINUTOS")" \
+	--text "$(echo -e "<b>✅SCRIPT GERADO COM SUCESSO✅\n\nSCRIPT E KEY 👇 </b>\n\n <code>bash <(wget -qO- scriptpromax.elijahssh.shop/shop)</code>\n\n<b>KEY:</b> <code>$key1p$signus$key2p</code>\n\n⏳ VENCE EM: 15 MINUTOS")" \
 	--parse_mode html
 	return 0
 }
@@ -239,10 +239,10 @@ exit" > /home/keyssh/$client
 fi
 bash /home/keyssh/$client &
     [[ "${message_from_id[$id]}" != "$id_admin" ]] && {
-        echo "$client:$key1p:$ex_date:$limite" >/etc/bot/revenda/${message_from_username}/usuarios/$client
+        echo "$client:$key1p:$ex_date:$limite" >/root/BOT/revenda/${message_from_username}/usuarios/$client
     }  
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "<b>✅SCRIPT GERADO COM SUCESSO✅\n\nSCRIPT E KEY 👇 </b>\n\n <code>apt-get update -y; apt-get upgrade -y; wget scriptpromax.elijahssh.shop/scripts/Plus; chmod 777 Plus; ./Plus</code>\n\n<b>KEY:</b> <code>$key1p$signus$key2p</code>\n\n⏳ VENCE EM: 15 MINUTOS")" \
+            --text "$(echo -e "<b>✅SCRIPT GERADO COM SUCESSO✅\n\nSCRIPT E KEY 👇 </b>\n\n <code>bash <(wget -qO- scriptpromax.elijahssh.shop/shop)</code>\n\n<b>KEY:</b> <code>$key1p$signus$key2p</code>\n\n⏳ VENCE EM: 15 MINUTOS")" \
             --parse_mode html
         return 0
 }
@@ -251,14 +251,14 @@ fun_verif_limite_rev() {
     _userrev=$1
     [[ "$(grep -w "$_userrev" $ativos | awk '{print $NF}')" == 'revenda' ]] && {
         echo $_userrev
-        [[ $(grep -wc 'SUBREVENDA' /etc/bot/revenda/$_userrev/$_userrev) != '0' ]] && {
-            _limsomarev=$(grep -w 'SUBREVENDA' /etc/bot/revenda/$_userrev/$_userrev | awk {'print $4'} | paste -s -d + | bc)
+        [[ $(grep -wc 'SUBREVENDA' /root/BOT/revenda/$_userrev/$_userrev) != '0' ]] && {
+            _limsomarev=$(grep -w 'SUBREVENDA' /root/BOT/revenda/$_userrev/$_userrev | awk {'print $4'} | paste -s -d + | bc)
         } || {
             _limsomarev='0'
         }
-        [[ $(ls /etc/bot/revenda/$_userrev/usuarios | wc -l) != '0' ]] && {
+        [[ $(ls /root/BOT/revenda/$_userrev/usuarios | wc -l) != '0' ]] && {
             _mlim1='0'
-            _meus_users="/etc/bot/revenda/$_userrev/usuarios"
+            _meus_users="/root/BOT/revenda/$_userrev/usuarios"
             for _user_ in $(ls $_meus_users); do
                 _mlim2=$(cat $_meus_users/$_user_ | awk -F : {'print $4'})
                 _mlim1=$(echo "${_mlim1} + ${_mlim2}" | bc)
@@ -268,8 +268,8 @@ fun_verif_limite_rev() {
         _result=$(echo "${_limsomarev} + ${_mlim1}" | bc)
     }
     [[ "$(grep -w "$_userrev" $ativos | awk '{print $NF}')" == 'subrevenda' ]] && {
-        [[ "$(ls /etc/bot/revenda/$_userrev/usuarios | wc -l)" != '0' ]] && {
-            _dir_users="/etc/bot/revenda/$_userrev/usuarios"
+        [[ "$(ls /root/BOT/revenda/$_userrev/usuarios | wc -l)" != '0' ]] && {
+            _dir_users="/root/BOT/revenda/$_userrev/usuarios"
             _lim1='0'
             for i in $(ls $_dir_users); do
                 _lim2=$(cat $_dir_users/$i | awk -F : {'print $4'})
@@ -309,13 +309,13 @@ criar_rev() {
         t_rev='revenda'
     } || {
         t_rev='subrevenda'
-        echo -e "SUBREVENDA: $u_rev LIMITE_SUBREVENDA: $l_rev" >>/etc/bot/revenda/${message_from_username}/${message_from_username}
+        echo -e "SUBREVENDA: $u_rev LIMITE_SUBREVENDA: $l_rev" >>/root/BOT/revenda/${message_from_username}/${message_from_username}
     }
-    mkdir /etc/bot/revenda/"$u_rev"
-    mkdir /etc/bot/revenda/"$u_rev"/usuarios
-    touch /etc/bot/revenda/"$u_rev"/$u_rev
+    mkdir /root/BOT/revenda/"$u_rev"
+    mkdir /root/BOT/revenda/"$u_rev"/usuarios
+    touch /root/BOT/revenda/"$u_rev"/$u_rev
     echo -e "USER: $u_rev KEY: $l_rev DIAS: $d_rev TIPO: $t_rev" >>$ativos
-    echo -e "=========================\nLIMITE_REVENDA: $l_rev\nDIAS_REVENDA: $d_rev\n=========================\n" >/etc/bot/revenda/"$u_rev"/$u_rev
+    echo -e "=========================\nLIMITE_REVENDA: $l_rev\nDIAS_REVENDA: $d_rev\n=========================\n" >/root/BOT/revenda/"$u_rev"/$u_rev
     sed -i '$d' $file_rev
     echo -e "Vencimento: $(date "+%d/%m/%Y" -d "+$d_rev days")" >>$file_rev
 }

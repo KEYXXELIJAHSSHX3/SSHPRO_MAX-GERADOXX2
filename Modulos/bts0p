@@ -2,6 +2,7 @@
 #=================================================#
 #SCRIPT MONTADO POR: ELIJAHSSH
 #=================================================#
+clear
 system=$(cat /etc/issue.net)
 date=$(date '+%d-%m-%Y <> %H:%M:%S')
 _hora=$(printf '%(%H:%M:%S)T')
@@ -31,10 +32,34 @@ fun_bar() {
     echo -e "\033[1;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
     tput cnorm
 }
+installbot () {
+echo ""
+echo -e "\033[1;33mINSTALANDO AGUARDE...."
+echo ""
+fun_bott () {
+mkdir $HOME/BOT
+mkdir $HOME/BOT/revenda
+cp /bin/botscript /root/BOT
+cp /bin/ShellBot.sh /root/BOT
+cp /bin/lista_ativos /root/BOT
+chmod 777 /root/BOT/bstt0p
+chmod 777 /root/BOT/ShellBot.sh
+chmod 777 /root/BOT/lista_ativos
+sleep 3s
+}
+fun_bar 'fun_bott'
+echo ""
+echo -e "\033[1;32mBOT TESTE INSTALADO!"
+sleep 3s
+clear
+bts0p
+}
+nbot () {
+echo ""
 [[ $(screen -list| grep -c 'bot_teste') == '0' ]] && {
     echo -ne "\n\033[1;32mINFORME O TOKEN\033[1;37m: "; read token
     echo -ne "\033[1;32mINFORME SEU ID:\033[1;37m "; read iduser
-    cd etc/bot
+    cd $HOME/BOT
     screen -dmS bot_teste ./botscript $token $iduser > /dev/null 2>&1
     echo ""
     echo -e "\033[1;32mBOT ATIVADO!"
@@ -49,3 +74,58 @@ fun_bar() {
     clear
     keyscript
 }
+}
+newbot () {
+    echo ""
+    fun-rev () {
+    rm -rf $HOME/BOT > /dev/null 2>&1
+    sleep 2s
+    }
+    fun_bar 'fun_rev'
+    echo ""
+    echo -e "\033[1;32m BOT TESTE REMOVIDO!"
+    sleep 3s
+    keyscript
+}
+while true $x != "ok"
+do
+clear
+echo -e "\033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m ☆☆☆☆☆   \033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+echo -e "\033[44;1;97m▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●●● SSH PRO MAX ●●● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;36m\033[0m"
+echo -e "\033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m ☆☆☆☆☆   \033[1;32m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+echo ""
+echo -e "\033[97m$system         $date"
+echo -e "\033[01;97m║ \033[44;1;97m▬▬▬▬▬▬▬▬▬ ● GERENCIADOR BOT TESTE ● ▬▬▬▬▬▬▬▬▬\033[0m \033[01;97m║"
+echo -e "\033[01;97m║                                               ║"
+echo -e "\033[01;97m║ \033[1;32m < 01 > \033[01;97m ● INSTALAR BOT TESTE                 ║\033[0m"
+echo -e "\033[01;97m║ \033[1;32m < 02 > \033[0m\033[01;97m ● ATIVAR/DESATIVAR BOT TESTE         ║\033[0m"
+echo -e "\033[01;97m║ \033[1;32m < 03 > \033[0m\033[01;97m ● REMOVER BOT TESTE                  ║\033[0m"
+echo -e "\033[01;97m║ \033[1;32m < 00 > \033[0m\033[01;97m ● VOLTAR                             ║\033[0m"
+echo -e "\033[1;97m╠━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═\033[0m\033[01;97m║" | lolcat -t
+echo -e "\033[3;32m                                     VERSAO 3.0.1"
+			tput civis
+echo -ne "\033[1;97mESCOLHA UMA OPCAO\033[1;33m\033[1;31m\033[1;34m : \033[1;32m"; read x
+case "$x" in 
+   1 | 01)
+   installbot
+   ;;
+   2 | 02)
+   nbot
+   ;;
+    3 | 03)
+   newbot
+   ;;
+   0 | 00)
+   echo -e "\033[1;31mSaindo...\033[0m"
+   sleep 2s
+   clear
+   keyscript
+   ;;
+   *)
+   echo -e "\n\033[1;31mOpcao invalida !\033[0m"
+   sleep 2s
+   keyscript
+esac
+done
+}
+#fim
