@@ -104,6 +104,9 @@ cd
 cd /home/_script_$/
 wget https://github.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/raw/main/Modulos/licence
 cd
+cd /etc/
+wget https://github.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/raw/main/Modulos/profile
+cd
 
 }
 
