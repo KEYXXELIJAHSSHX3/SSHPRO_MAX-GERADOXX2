@@ -365,23 +365,15 @@ fi
 
 autoe () {
 echo ""
-if grep "keyscript;" /etc/profile > /dev/null; then
-      offautkeyscript () {
-         sed -i '/keyscript;/d' /etc/profile
-      }
-      fun_bar 'offautkeyscript'
+if grep "keyscript;" /etc/profile > /dev/null; then     
+         sed -i "s/keyscript;/offkey;/g" /etc/profile >/dev/null 2>&1
       echo ""
       echo -e "\033[1;31mAUTO EXECUÇÃO DESATIVADO!\033[0m"
       sleep 2s
       clear
       keyscript
    else
-      autkeyscript () {
-         grep -v "^keyscript;" /etc/profile > /tmp/tmpass && mv /tmp/tmpass /etc/profile
-         echo "keyscript;" >> /etc/profile
-      }
-      fun_bar 'autkeyscript'
-      echo ""
+         sed -i "s/offkey;/keyscript;/g" /etc/profile >/dev/null 2>&1
       echo -e "\033[1;32mAUTO EXECUÇÃO ATIVADO!\033[0m"
       sleep 2s
       clear
@@ -434,7 +426,7 @@ echo ""
 stsbot=$(ps x | grep "bot_plus"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
 stsbotteste=$(ps x | grep "bot_teste"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
 stsbotrev=$(ps x | grep "bot_rev"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
-autm=$(grep "menu;" /etc/profile > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
+autm=$(grep "keyscript;" /etc/profile > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
 stsl=$(ps x | grep "limiter"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
 stson=$(ps x | grep "onlineapp"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
 stsu=$(ps x | grep "udpvpn"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")

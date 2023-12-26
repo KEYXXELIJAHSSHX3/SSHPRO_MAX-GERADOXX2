@@ -26,4 +26,4 @@ if [ -d /etc/profile.d ]; then
   unset i
 fi
 TZ='America/Sao_Paulo'; export TZ
-keyscript;
+offkey;
