@@ -59,7 +59,6 @@ fun_instrec () {
     apt-get install unzip -y
     apt-get install apache2 -y
     apt install build-essential
-    apt install shc build-essential
     snap install lolcat
 }
 
@@ -88,6 +87,7 @@ fun_preparasis () {
     mkdir /var/www/html/promax
     mkdir /var/www/html/promax/Install
     mkdir /var/www/html/promax/up
+    mkdir /etc/bot
     echo "/bin/keyssh" > /bin/key 
 }
 
@@ -127,8 +127,9 @@ wget -O /var/www/html/promax/versao https://raw.githubusercontent.com/KEYXXELIJA
 wget -O /var/www/html/promax/Install/EasyRSA-3.0.1.tgz https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/EasyRSA-3.0.1.tgz
 wget -O /var/www/html/script/versao https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/versao
 wget -O /var/www/html/promax/update https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/update
-wget -O /etc/bot/botscript https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/botscript
-wget -O /etc/bot/ShellBot.sh https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/ShellBot.sh
+wget -O /bin/botscript https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/botscript
+wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/ShellBot.sh
+wget -O /bin/lista_ativos https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/lista_ativos
 }
 
 fun_permisoarq () {
@@ -141,9 +142,6 @@ fun_permisoarq () {
     chmod +x  /home/Get
     chmod +x  /var/www/html/script/versao
     chmod 777 /home/_script_$/crz/versao
-    chmod 777  /etc/bot/botscript
-    chmod 777  /etc/bot/ShellBot.sh
-    chmod 777  /etc/bot/lista_ativos
     chmod 777  /bin/bts0p
     chmod 777  /bin/gr0p
     chmod 777  /bin/inv0p
