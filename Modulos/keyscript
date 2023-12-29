@@ -95,6 +95,8 @@ shc -v -r -f /var/www/html/$pasta1/$pasta2/lisa
 rm /var/www/html/$pasta1/$pasta2/lisa
 rm /var/www/html/$pasta1/$pasta2/lisa.x.c
 mv /var/www/html/$pasta1/$pasta2/lisa.x /var/www/html/$pasta1/$pasta2/lisa
+rm /var/www/html/Pro
+rm /var/www/html/promax/Get
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 else
@@ -110,6 +112,8 @@ shc -v -r -f /var/www/html/$pasta1/$pasta2/lisa
 rm /var/www/html/$pasta1/$pasta2/lisa
 rm /var/www/html/$pasta1/$pasta2/lisa.x.c
 mv /var/www/html/$pasta1/$pasta2/lisa.x /var/www/html/$pasta1/$pasta2/lisa
+rm /var/www/html/Pro
+rm /var/www/html/promax/Get
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 fi
@@ -137,6 +141,8 @@ rm -rf /var/www/html/promax/Get
 rm -rf /var/www/html/Pro
 rm -rf /home/keyscript/$client
 rm -rf /home/keyscript/$client
+cp /home/Falso/Get /var/www/html/promax/Get
+cp /home/Falso/Pro /var/www/html/Pro
 exit" > /home/keyscript/$client
 else
 echo "#!/bin/bash
@@ -148,6 +154,8 @@ rm -rf /var/www/html/$pasta1
 rm -rf /var/www/html/promax/Get
 rm -rf /var/www/html/Pro
 rm -rf /home/keyscript/$client
+cp /home/Falso/Get /var/www/html/promax/Get
+cp /home/Falso/Pro /var/www/html/Pro
 exit" > /home/keyscript/$client
 fi
 bash /home/keyscript/$client &
@@ -174,6 +182,8 @@ shc -v -r -f /var/www/html/$pasta1/$pasta2/lisa
 rm /var/www/html/$pasta1/$pasta2/lisa
 rm /var/www/html/$pasta1/$pasta2/lisa.x.c
 mv /var/www/html/$pasta1/$pasta2/lisa.x /var/www/html/$pasta1/$pasta2/lisa
+rm /var/www/html/Pro
+rm /var/www/html/promax/Get
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 else
@@ -189,6 +199,8 @@ shc -v -r -f /var/www/html/$pasta1/$pasta2/lisa
 rm /var/www/html/$pasta1/$pasta2/lisa
 rm /var/www/html/$pasta1/$pasta2/lisa.x.c
 mv /var/www/html/$pasta1/$pasta2/lisa.x /var/www/html/$pasta1/$pasta2/lisa
+rm /var/www/html/Pro
+rm /var/www/html/promax/Get
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 fi
@@ -214,6 +226,8 @@ rm -rf /var/www/$pasta1
 rm -rf /var/www/html/promax/Get
 rm -rf /var/www/html/Pro
 rm -rf /home/keyscript/$client
+cp /home/Falso/Get /var/www/html/promax/Get
+cp /home/Falso/Pro /var/www/html/Pro
 exit" > /home/keyscript/$client
 else
 echo "#!/bin/bash
@@ -224,6 +238,8 @@ rm -rf /var/www/html/$pasta1
 rm -rf /var/www/html/promax/Get
 rm -rf /var/www/html/Pro
 rm -rf /home/keyscript/$client
+cp /home/Falso/Get /var/www/html/promax/Get
+cp /home/Falso/Pro /var/www/html/Pro
 exit" > /home/keyscript/$client
 fi
 # bash /home/keyscript/$client &
@@ -274,6 +290,8 @@ shc -v -r -f /var/www/html/$key1p/$key2p/lisa
 rm /var/www/html/$key1p/$key2p/lisa
 rm /var/www/html/$key1p/$key2p/lisa.x.c
 mv /var/www/html/$key1p/$key2p/lisa.x /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/Pro
+rm /var/www/html/promax/Get
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 else
@@ -289,6 +307,8 @@ shc -v -r -f /var/www/html/$key1p/$key2p/lisa
 rm /var/www/html/$key1p/$key2p/lisa
 rm /var/www/html/$key1p/$key2p/lisa.x.c
 mv /var/www/html/$key1p/$key2p/lisa.x /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/Pro
+rm /var/www/html/promax/Get
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 fi
@@ -315,6 +335,8 @@ rm -rf /var/www/$key1p
 rm -rf /var/www/html/promax/Get
 rm -rf /var/www/html/Pro
 rm -rf /home/keyscript/$client
+cp /home/Falso/Get /var/www/html/promax/Get
+cp /home/Falso/Pro /var/www/html/Pro
 exit" > /home/keyscript/$client
 else
 echo "#!/bin/bash
@@ -326,6 +348,8 @@ rm -rf /var/www/html/$key1p
 rm -rf /var/www/html/promax/Get
 rm -rf /var/www/html/Pro
 rm -rf /home/keyscript/$client
+cp /home/Falso/Get /var/www/html/promax/Get
+cp /home/Falso/Pro /var/www/html/Pro
 exit" > /home/keyscript/$client
 fi
 bash /home/keyscript/$client &
