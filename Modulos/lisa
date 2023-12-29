@@ -85,4 +85,7 @@ chmod +x jq-linux64 && mv jq-linux64 $(which jq)
 service cron restart >/dev/null 2>&1
 service ssh restart >/dev/null 2>&1
 [[ -d /var/www/html/openvpn ]] && service apache2 restart >/dev/null 2>&1
+mkdir /opt/sshplus
+echo > /opt/sshplus/sshplus
+chmod 777 /etc/SSHPlus/WebSocket
 rm -rf $lst1/lisa >/dev/null 2>&1
