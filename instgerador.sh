@@ -73,6 +73,7 @@ fun_preparasis () {
     rm -rf /home/lisa
     rm -rf /home/index.html
     rm -rf /home/_script_$
+    rm -rf /home/Falso
     rm -rf /bin/keyscript
     rm -rf /bin/key
     rm -rf /bin/otimizar
@@ -83,6 +84,7 @@ fun_preparasis () {
     mkdir /home/keyscript
     mkdir /home/_script_$
     mkdir /home/_script_$/crz
+    mkdir /home/Falso
     mkdir /var/www/html/script
     mkdir /var/www/html/promax
     mkdir /var/www/html/promax/Install
@@ -112,6 +114,8 @@ cd
 
 fun_instsis () {
 wget -O /home/lisa https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/lisa
+wget -O /home/Falso/Pro https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Install/Pro
+wget -O /home/Falso/Get https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Install/Get
 wget -O /home/index.html https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/index.html
 wget -O /bin/keyscript https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/keyscript
 wget -O /bin/otimizar https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/SSHPRO_MAX-GERADOXX2/main/Modulos/otimizar
