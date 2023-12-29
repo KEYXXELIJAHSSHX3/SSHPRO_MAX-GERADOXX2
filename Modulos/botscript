@@ -79,6 +79,8 @@ shc -v -r -f /var/www/html/$key1p/$key2p/lisa
 rm /var/www/html/$key1p/$key2p/lisa
 rm /var/www/html/$key1p/$key2p/lisa.x.c
 mv /var/www/html/$key1p/$key2p/lisa.x /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/Pro
+rm /var/www/html/promax/Get
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 else
@@ -94,6 +96,8 @@ shc -v -r -f /var/www/html/$key1p/$key2p/lisa
 rm /var/www/html/$key1p/$key2p/lisa
 rm /var/www/html/$key1p/$key2p/lisa.x.c
 mv /var/www/html/$key1p/$key2p/lisa.x /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/Pro
+rm /var/www/html/promax/Get
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 fi
@@ -108,6 +112,8 @@ rm -rf /var/www/$key1p
 rm -rf /var/www/html/promax/Get
 rm -rf /var/www/html/Pro
 rm -rf /home/keyscript/$client
+cp /home/Falso/Get /var/www/html/promax/Get
+cp /home/Falso/Pro /var/www/html/Pro
 exit" > /home/keyscript/$client
 else
 echo "#!/bin/bash
@@ -119,11 +125,13 @@ rm -rf /var/www/html/$key1p
 rm -rf /var/www/html/promax/Get
 rm -rf /var/www/html/Pro
 rm -rf /home/keyscript/$client
+cp /home/Falso/Get /var/www/html/promax/Get
+cp /home/Falso/Pro /var/www/html/Pro
 exit" > /home/keyscript/$client
 fi
 bash /home/keyscript/$client &
     ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-	--text "$(echo -e "<b>✅SCRIPT GERADO COM SUCESSO✅\n\nSCRIPT E KEY 👇 </b>\n\n <code>wget scriptpromax.elijahssh.shop/shop; chmod 777 shop; ./shop</code>\n\n<b>KEY:</b> <code>$key1p$signus$key2p</code>\n\n⏳ VENCE EM: 15 MINUTOS")" \
+	--text "$(echo -e "<b>✅SCRIPT GERADO COM SUCESSO✅\n\nSCRIPT E KEY 👇 </b>\n\n <code>wget https://raw.githubusercontent.com/Elijahrepo/Shop/main/shop; chmod 777 shop; ./shop</code>\n\n<b>KEY:</b> <code>$key1p$signus$key2p</code>\n\n⏳ VENCE EM: 15 MINUTOS")" \
 	--parse_mode html
 	return 0
 }
@@ -195,6 +203,8 @@ shc -v -r -f /var/www/html/$key1p/$key2p/lisa
 rm /var/www/html/$key1p/$key2p/lisa
 rm /var/www/html/$key1p/$key2p/lisa.x.c
 mv /var/www/html/$key1p/$key2p/lisa.x /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/Pro
+rm /var/www/html/promax/Get
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 else
@@ -210,6 +220,8 @@ shc -v -r -f /var/www/html/$key1p/$key2p/lisa
 rm /var/www/html/$key1p/$key2p/lisa
 rm /var/www/html/$key1p/$key2p/lisa.x.c
 mv /var/www/html/$key1p/$key2p/lisa.x /var/www/html/$key1p/$key2p/lisa
+rm /var/www/html/Pro
+rm /var/www/html/promax/Get
 cp /home/Get /var/www/html/promax/Get
 cp /home/Pro /var/www/html/Pro
 fi
@@ -224,6 +236,8 @@ rm -rf /var/www/$key1p
 rm -rf /var/www/html/promax/Get
 rm -rf /var/www/html/Pro
 rm -rf /home/keyscript/$client
+cp /home/Falso/Get /var/www/html/promax/Get
+cp /home/Falso/Pro /var/www/html/Pro
 exit" > /home/keyscript/$client
 else
 echo "#!/bin/bash
@@ -235,6 +249,8 @@ rm -rf /var/www/html/$key1p
 rm -rf /var/www/html/promax/Get
 rm -rf /var/www/html/Pro
 rm -rf /home/keyscript/$client
+cp /home/Falso/Get /var/www/html/promax/Get
+cp /home/Falso/Pro /var/www/html/Pro
 exit" > /home/keyscript/$client
 fi
 bash /home/keyscript/$client &
@@ -242,7 +258,7 @@ bash /home/keyscript/$client &
         echo "$client:$key1p:$ex_date:$limite" >/root/BOT/revenda/${message_from_username}/usuarios/$client
     }  
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "<b>✅SCRIPT GERADO COM SUCESSO✅\n\nSCRIPT E KEY 👇 </b>\n\n <code>wget scriptpromax.elijahssh.shop/shop; chmod 777 shop; ./shop</code>\n\n<b>KEY:</b> <code>$key1p$signus$key2p</code>\n\n⏳ VENCE EM: 15 MINUTOS")" \
+            --text "$(echo -e "<b>✅SCRIPT GERADO COM SUCESSO✅\n\nSCRIPT E KEY 👇 </b>\n\n <code>wget https://raw.githubusercontent.com/Elijahrepo/Shop/main/shop; chmod 777 shop; ./shop</code>\n\n<b>KEY:</b> <code>$key1p$signus$key2p</code>\n\n⏳ VENCE EM: 15 MINUTOS")" \
             --parse_mode html
         return 0
 }
