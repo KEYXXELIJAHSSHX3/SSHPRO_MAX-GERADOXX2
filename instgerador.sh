@@ -59,7 +59,7 @@ fun_instrec () {
     apt-get install unzip -y
     apt-get install apache2 -y
     apt install build-essential
-    snap install lolcat
+    sudo apt-get install -y lolcat
 }
 
 fun_apalist () {
